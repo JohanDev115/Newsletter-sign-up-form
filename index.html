@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Newsletter sign-up form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <section class="login-page">
+      <header class="hero">
+        <picture>
+          <source media="(min-width: 465px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+        </picture>
+      </header>
+      <main>
+        <section class="description">
+          <h1 class="description__title">Stay updated!</h1>
+          <p class="description__text">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <img src="./assets/images/icon-list.svg" alt="">
+              <span>Product discovery and builiding what matters</span>
+            </li>
+            <li class="feature-list-item">
+              <img src="./assets/images/icon-list.svg" alt="">
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li class="feature-list-item">
+              <img src="./assets/images/icon-list.svg" alt="">
+              <span>And much more</span>
+            </li>
+          </ul>
+        </section>
+        <form id="form" class="form">
+          <label class="email-label" for="email">Email address</label>
+          <input class="email-input" type="email" name="email" placeholder="email@company.com">
+          <button class="submit-button" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </main>
+    </section>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://johandev115.github.io/JohanDev115/index.html" target="_blank">JohanDev</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

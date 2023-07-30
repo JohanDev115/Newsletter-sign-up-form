@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+p, li, label {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+}
+
+.login-page {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 26px;
+}
+
+.hero picture img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  padding: 20px;
+  height: 100%;
+}
+
+.description {
+  margin-bottom: 26px;
+}
+
+.description__title {
+  font-size: 40px;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 16px;
+}
+
+.description__text {
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+}
+
+.feature-list-item {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.feature-list-item img {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+}
+
+.email-label {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.email-label:after {
+  content: 'Valid email required';
+  position: absolute;
+  right: 0;
+  color: red;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.email-input {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: hsl(231, 7%, 60%);
+  border-radius: 8px;
+  border: .5px solid hsl(231, 7%, 60%);
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.email-input:focus {
+  border: 1px solid hsl(234, 29%, 20%);
+}
+
+.form:invalid .email-input {
+  border-color: rgb(241, 95, 95);
+  background-color: rgb(250, 216, 216);
+  color: rgb(248, 61, 61);
+}
+
+.form:invalid .email-label::after {
+  opacity: 1;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
+.confirmation-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.confirmation-msg {
+  width: 100%;
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-msg__icon-success {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.confirmation-msg__title {
+  font-size: 34px;
+  width: min-content;
+  margin-bottom: 16px;
+  color: hsl(234, 29%, 20%);
+}
+
+.confirmation-msg__email {
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+
+.dismiss-button {
+  width: 100%;
+  padding: 16px;
+  background-color: hsl(234, 29%, 20%);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dismiss-button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 1024px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(235, 18%, 26%);
+  }
+  .login-page {
+    height: 570px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "main hero";
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  .hero {
+    grid-area: hero;
+    margin-bottom: 0;
+    min-height: fit-content;
+  }
+
+  main {
+    grid-area: main;
+    padding: 40px;
+  }
+
+  .confirmation-page {
+    width: 460px;
+    height: 460px;
+    overflow: hidden;
+    padding: 50px;
+    border-radius: 30px;
+  }
+
+  .attribution {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .attribution a { color: hsl(187, 100%, 62%); }
+}
